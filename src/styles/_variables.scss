@@ -1,0 +1,23 @@
+$paddingHeight: 2vh; 
+$paddingSide: 4vw; 
+$contentPadding: $paddingHeight $paddingSide ;
+$defaultBackgroundColor: #ffffff;
+$black:#150C21;
+$white:#ffffff;
+$primary : #ffffff;
+$secondaryBG : #3c1f1b;
+$primaryBG : #111111;
+$stemBackgroundColor:linear-gradient(0deg, #A5A6F6 -18.66%, rgba(252, 221, 236, 0) 30.15%);
+$fontFamily: 'Poppins',sans-serif;
+$defaultFontSize:16px;
+$headerHeight: 75px;
+$footerColor:#A4A4A4;
+$anchorMargin: 1.5vw;
+$smallMargin: 0.5vw;
+$smallpadding: 4px;
+$borderRadius:10px;
+// MEDIA QUERIES
+$android: "540px";
+$tablet: "768px";
+$laptop: "1024px";
+$maxScreen: 1920px;

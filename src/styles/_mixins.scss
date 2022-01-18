@@ -1,0 +1,33 @@
+@mixin flex($direction:row, $justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  @content;
+}
+
+@mixin media($device:$laptop, $type:min) {
+  @media only screen and (#{$type}-width: #{$device}) {
+    @content;
+  }
+}
+
+@mixin srcset($device:$tablet) {
+ 
+  &:last-child() {
+    display: none;
+
+    @include media($device) {
+      display: block;
+    }
+  }
+  @include media($device) {
+    display: none;
+  }
+
+}
+
+@mixin margin($t: 1, $b: $t, $vh: vh) {
+  $h1: (3, 3);
+  margin: nth($h1, 1) / $t + $vh 0 nth($h1, 2) / $b + $vh;
+}

@@ -1,0 +1,188 @@
+@use "../styles" as *;
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  box-sizing: border-box;
+  color: $white;
+  list-style: none;
+  text-decoration: none;
+  text-align: initial;
+  text-size-adjust: 100%;
+  line-height: 1.3;
+}
+
+:root {
+  font: {
+    family: $fontFamily;
+    weight: 500;
+    style: normal;
+  }
+}
+
+html {
+  color: #000;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $primaryBG;
+  color: $black;
+  background-position: center;
+  width: 100%;
+}
+
+::selection {
+  color: #fff;
+  background-color: #1207ab;
+}
+
+a {
+  border-radius: 10px;
+  //box-shadow: 0 0.5px 0 rgba(0,0,0,12), 0 1px 0px rgba(0,0,0,4);
+  //transition: all 1.1s cubic-bezier(.25,.8,.25,1);
+  cursor: pointer;
+  &.button {
+    display: inline-block;
+  }
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+button {
+  @extend a;
+  @extend .linkButton;
+  background-color: $black;
+  line-height: 1.71;
+  &:hover {
+    box-shadow: 0px 0.5px 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #f5f7fa;
+    box-shadow: 0 2px #c2c0c0;
+    opacity: 0.8;
+    border: 1px solid #f5f7fa;
+  }
+}
+
+img {
+  //vertical-align: middle;
+  display: block;
+  margin: 0 auto;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+h1 {
+  font: {
+    size: 10.5vw;
+    weight: 600;
+  }
+  @include margin();
+  @include media(540px) {
+    font-size: 7.5vw;
+  }
+  @include media {
+    font-size: 3.2vw;
+  }
+  @include media($laptop) {
+    font-size: 3.7vw;
+  }
+}
+h2 {
+  font: {
+    size: 2.5rem;
+    weight: 600;
+  }
+  @include margin();
+  margin-top: 0;
+  @include media(540px) {
+    // font-size: 7.5vw;
+  }
+  @include media {
+    font-size: 3.2vw;
+  }
+  @include media($laptop) {
+    font-size: 3.7vw;
+  }
+}
+h3 {
+  font: {
+    size: 1.4em;
+    weight: 300;
+  }
+  @include margin(0.5,5);
+
+  @include media(540px) {
+    font-size: 5vw;
+  }
+  @include media {
+    font-size: 3.2vw;
+  }
+  @include media($laptop) {
+    font-size: 1.8em;
+  }
+}
+h4 {
+  font: {
+    size: 1.1em;
+    weight: 300;
+  }
+  @include margin(2);
+  @include media(540px) {
+    font-size: 4vw;
+  }
+  @include media {
+    font-size: 1.3em;
+  }
+  @include media($laptop) {
+    font-size: 1.7em;
+  }
+}
+div,
+p {
+  font: {
+    size: $defaultFontSize;
+    weight: 400;
+  }
+  line-height: 1.7;
+  text-align: justify;
+  word-break: keep-all;
+  @include margin(2);
+  color: rgba($color: $black, $alpha: 0.59);
+  
+  @include media {
+    font-size: 1.5vw;
+  }
+  @include media($laptop) {
+    font-size: 1.25vw;
+  }
+}
+
+hr {
+  width: 100%;
+  height: 0.1vh;
+  min-height: 1px;
+  margin: 2vh 0;
+  background-color: gray;
+}
+
+li {
+  list-style-type: none;
+}
+
+sup,
+.error {
+  color: red;
+}
+
+#root{
+  margin: 0 auto !important;
+  
+}

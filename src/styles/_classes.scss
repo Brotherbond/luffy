@@ -1,0 +1,247 @@
+.black {
+  color: $black !important;
+}
+.bgBlack {
+  background-color: $black !important;
+}
+.white {
+  color: $white !important;
+}
+.bgWhite {
+  background-color: $white !important;
+}
+.bgMobileHeader {
+  background-color: $white;
+  @include media {
+    background-color: rgba(#000, 0);
+  }
+}
+
+.button {
+  color: $black;
+  text-align: center;
+  border: 2px solid #{$secondaryBG};
+  border-radius: $borderRadius;
+  white-space: nowrap;
+  vertical-align: middle;
+  transition: all 0.3s ease-in-out;
+  font-size: $defaultFontSize;
+  padding: 2% 3%;
+}
+
+.linkButton {
+  width: 100%;
+  @extend .button;
+  min-height: 40px;
+  max-height: 70px;
+  height: 4 * $paddingHeight;
+  margin: 2 * $paddingHeight 0;
+  &:hover {
+    background-color: white;
+  }
+  @include media {
+    margin: 4 * $paddingHeight 0;
+    width: 24vw;
+  }
+  @include media($laptop) {
+    width: 18vw;
+  }
+  //further classify buttons based on width and Color
+}
+.secondaryButton {
+  width: 50vw;
+  align-self: flex-start;
+  @include media($tablet) {
+    align-self: center;
+    width: 24vw;
+  }
+  @include media {
+    width: 18vw;
+  }
+}
+.mover {
+  animation: mover 1s infinite alternate;
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+.flex {
+  @include flex(column);
+  max-width: 100%;
+  overflow: hidden;
+  img {
+    max-width: 80%;
+  }
+
+  button {
+    font-size: 3vw;
+    &:first-child:hover {
+      background-color: #1ba33c;
+      opacity: 1;
+    }
+  }
+  > div {
+    margin-top: 5vh;
+  }
+  $column: & + _c;
+  $row: & + _r;
+  @at-root #{$column} {
+    @include flex(column);
+    @at-root &r {
+      @extend #{$column};
+      @include media {
+        flex-direction: row;
+      }
+    }
+    @at-root &R {
+      @extend #{$column};
+      @include media {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  @at-root #{$row} {
+    @include flex(row);
+    @at-root &c {
+      @extend #{$row};
+      @include media {
+        flex-direction: column;
+      }
+    }
+    @at-root &C {
+      @extend #{$row};
+      @include media {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+  @include media {
+    flex-direction: row;
+    img {
+      width: 50%;
+    }
+  }
+}
+// display using flexbox
+.mobile {
+  display: flex;
+  @include media {
+    display: none;
+  }
+}
+.none {
+  display: none;
+  //starts showing from on tablet
+  &_m {
+    display: none;
+    @include media {
+      display: flex;
+    }
+  }
+  //only shows on laptop
+  &_t {
+    display: none ;
+    @include media($laptop) {
+      display: flex;
+    }
+  }
+}
+.show {
+  //starts showing from on tablet
+  &_m {
+    display: flex;
+    @include media {
+      display: none;
+    }
+  }
+  //only shows on laptop
+  &_t {
+    display: flex;
+    @include media($laptop) {
+      display: none;
+    }
+  }
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+.w {
+  $widths: 25, 33, 50, 60, 75, 100;
+  @each $width in $widths {
+    @at-root &#{$width} {
+      width: $width + #{"%"};
+    }
+    $devices: (
+      tablet: $tablet,
+      laptop: $laptop,
+    );
+    @each $device, $type in $devices {
+      @at-root .#{$device} {
+        @include media($type) {
+          display: flex;
+          @at-root &#{$width} {
+            width: $width + #{"%"};
+            margin: {
+              left: auto;
+              right: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//font-weight
+.fw {
+  $fontW: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+  $text-align: left, center, right;
+  @each $fw in $fontW {
+    $bb: #{& + $fw};
+    @at-root #{$bb} {
+      @each $ta in $text-align {
+        @at-root &_#{$ta} {
+          @extend #{$bb};
+          text-align: $ta;
+        }
+      }
+      font-weight: $fw;
+    }
+  }
+}
+
+.back-to-top {
+  height: 36px;
+  width: 36px;
+  bottom: 50px;
+  right: 30px;
+  padding: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  position: fixed;
+  color: #fff;
+  background-color: #2f55d4;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  &:hover {
+    transform: rotate(45deg);
+    background-color: #0b5ed7 !important;
+
+    border-color: #0a58ca;
+    svg {
+      transform: rotate(-45deg);
+    }
+  }
+  svg {
+    transition: all 0.5s ease;
+  }
+}
