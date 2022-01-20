@@ -23,10 +23,14 @@ main.flex_cr {
   > section {
     min-width: 280px;
     width: 100%;
-    max-width: 320px;
+    max-width: 550px;
     border-radius: $borderRadius * 2;
     border: 2px solid #{$footerColor}50;
     margin-bottom: $headerHeight;
+    @include media{
+      width: 30.3%;
+      
+}
     &.intro {
       border: none !important;
       div{
