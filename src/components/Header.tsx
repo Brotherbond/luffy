@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom"
 import Images from "../images";
 import styles from "../styles/modules/header.module.scss"
+import { Routes } from "../util/routes";
 
 const Header = () => {
     const [nav, setNav] = useState(true)
@@ -10,12 +11,12 @@ const Header = () => {
     return (
         <>
             <header className={styles.header}>
-                <Link to="/">
+                <Link to={Routes.home}>
                     <img src={Images['Logo']} alt="logo" height={75} />
                 </Link>
                 <nav id="nav" className={`${nav ? "none_t":""} flex_cr`}>
-                    <Link to="/#" className={styles.button}>How to Swap</Link>
-                    <a href="/connect" className={styles.button}>Connect Wallet</a>
+                    <a href={Routes.external.uniswap} className={styles.button}>How to Swap</a>
+                    <a href={Routes.external.luffy} className={styles.button}>Connect Wallet</a>
                 </nav>
 
                 <span id={styles.icon} className="show_t" onClick={NavOptions}>

@@ -3,22 +3,22 @@ import Images from "../images";
 const Alliances = [{
     img: Images.luffy,
     name: "Luffy",
-    unit: '1,232,232,268'
+    unit: '6,532,291'
 },
 {
     img: Images.goku,
     name: "Goku",
-    unit: '7,452,323'
+    unit: '2,327,345'
 },
 {
     img: Images.deku,
     name: "Deku",
-    unit: '1,232,232,268'
+    unit: '1,232,322'
 },
 {
     img: Images.chopper,
     name: "Chopper",
-    unit: '67,232,268'
+    unit: '4,978,455'
 }
 
 ]

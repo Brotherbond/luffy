@@ -1,0 +1,15 @@
+@use "../" as *;
+
+footer{
+  @include flex(row, space-between);
+  padding: $paddingHeight $paddingSide;
+  *{
+color: $white;
+  }
+  a{
+    img{
+      width: 25px;
+      margin-right: $smallpadding;
+    }
+  }
+}

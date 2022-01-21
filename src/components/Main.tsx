@@ -4,6 +4,7 @@ import Images from "../images";
 import Alliances from "../data/alliances";
 import styles from "../styles/modules/main.module.scss";
 import ConnectWallet from "./SelectWallet";
+import { Routes } from "../util/routes";
 
 const temp:any[] = [];
 Alliances.forEach(option => temp.push({ value: option.name, label: option.name }));
@@ -26,7 +27,7 @@ const Main = () => {
                 <section className={styles.flex_c}>
                     <div className={styles.mt}>BALANCES</div>
                     <div>
-                        <div className={styles.flex}><span className={styles.flex_r}><img src={Images.onealliance} width={60} height={60} alt={`${Images.onealliance} images`} /> LUFFY V2</span> <span><a href="/connect" className="button flex">Connect wallet</a></span></div>
+                        <div className={styles.flex}><span className={styles.flex_r}><img src={Images.onealliance} width={60} height={60} alt={`${Images.onealliance} images`} /> LUFFY V2</span> <span><a href={Routes.external.luffy} className="button flex">Connect wallet</a></span></div>
                     </div>
                     <div className={`${styles.alliances} ${styles.flex_c} ${styles.mb}`}>
                         {
@@ -42,7 +43,7 @@ const Main = () => {
                         <ConnectWallet defaultValue={options[0].label}/>                        
                         
                     </div>
-                    <div className={`${styles.mb} flex_c`}><a href='/connect' className="w100 flex_r">Connect Wallet</a></div>
+                    <div className={`${styles.mb} flex_c`}><a href={Routes.external.luffy} className="w100 flex_r">Connect Wallet</a></div>
                 </section>
             </main>
         </>
