@@ -16,7 +16,7 @@ const Header = () => {
                 </Link>
                 <nav id="nav" className={`${nav ? "none_t":""} flex_cr`}>
                     <a href={Routes.external.uniswap} className={styles.button}>How to Swap</a>
-                    <a href={Routes.external.luffy} className={styles.button}>Connect Wallet</a>
+                    <a href={Routes.external.pricing} className={styles.button}>Pricing</a>
                 </nav>
 
                 <span id={styles.icon} className="show_t" onClick={NavOptions}>

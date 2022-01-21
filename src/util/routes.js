@@ -16,6 +16,7 @@ export const Routes = {
     testing:"/test",
     transactions:"/dashboard/transactions",
     external:{
+        pricing:"//coinmarketcap.com/currencies/luffy",
         uniswap:"//uniswap.org",
         luffy: "//luffytoken.com/buy",
         myGithub: "//github.com/Brotherbond"
