@@ -1,17 +1,12 @@
-import React from "react";
 // import { Link } from "react-router-dom";
 import Images from "../images";
 import Alliances from "../data/alliances";
 import styles from "../styles/modules/main.module.scss";
-import ConnectWallet from "./SelectWallet";
+import ConnectWallet from "./ConnectWallet";
 import { Routes } from "../util/routes";
 
-const temp:any[] = [];
-Alliances.forEach(option => temp.push({ value: option.name, label: option.name }));
-export const options = temp;
 
-
-const Main = () => {
+const Main = (): JSX.Element => {
     return (
         <>
             <main className={` ${styles.flex_cr}`}>
@@ -39,9 +34,8 @@ const Main = () => {
                 <section className={styles.flex_c}>
                     <div className={styles.mt}>SWAP FOR LUFFY V2</div>
                     <div className={styles.connect}>
-                        <ConnectWallet defaultValue={options[3].label}/>                        
-                        <ConnectWallet defaultValue={options[0].label}/>                        
-                        
+                        <ConnectWallet defaultValue={Alliances[3].name}/>                        
+                        <ConnectWallet defaultValue={Alliances[0].name}/>                                                
                     </div>
                     <div className={`${styles.mb} flex_c`}><a href={Routes.external.luffy} className="w100 flex_r">Connect Wallet</a></div>
                 </section>
