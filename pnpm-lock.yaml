@@ -7,7 +7,7 @@ specifiers:
   '@testing-library/user-event': ^14.2.0
   '@types/jest': ^28.1.1
   '@types/node': ^18.0.0
-  '@types/react': ^18.0.12
+  '@types/react': ^18.0.13
   '@types/react-dom': ^18.0.5
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -24,13 +24,13 @@ dependencies:
   '@testing-library/user-event': 14.2.0
   '@types/jest': 28.1.1
   '@types/node': 18.0.0
-  '@types/react': 18.0.12
+  '@types/react': 18.0.13
   '@types/react-dom': 18.0.5
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
   react-scripts: 5.0.1_ew4trf5tzlmdbx4gzy6d4ww6wa
-  react-select: 5.3.2_zslnhrumrmjiaznigdttriuiiy
+  react-select: 5.3.2_ocvlaah2275pzedeuxsmtxxp2y
   sass: 1.52.3
   typescript: 4.7.3
   web-vitals: 2.1.4
@@ -1434,7 +1434,7 @@ packages:
     resolution: {integrity: sha512-igX9a37DR2ZPGYtV6suZ6whr8pTFtyHL3K/oLUotxpSVO2ASaprmAe2Dkq7tBo7CRY7MMDrAa9nuQP9/YG8FxQ==}
     dev: false
 
-  /@emotion/react/11.8.2_ihkhab3gpahsyb3ahx7z7w4mhq:
+  /@emotion/react/11.8.2_wlff343ihbuq5ksmlrv2tytkq4:
     resolution: {integrity: sha512-+1bcHBaNJv5nkIIgnGKVsie3otS0wF9f1T1hteF3WeVvMNQEtfZ4YyFpnphGoot3ilU/wWMgP2SgIDuHLE/wAA==}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -1452,7 +1452,7 @@ packages:
       '@emotion/serialize': 1.0.2
       '@emotion/utils': 1.1.0
       '@emotion/weak-memoize': 0.2.5
-      '@types/react': 18.0.12
+      '@types/react': 18.0.13
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
     dev: false
@@ -2380,17 +2380,17 @@ packages:
   /@types/react-dom/18.0.5:
     resolution: {integrity: sha512-OWPWTUrY/NIrjsAPkAk1wW9LZeIjSvkXRhclsFO8CZcZGCOg2G0YZy4ft+rOyYxy8B7ui5iZzi9OkDebZ7/QSA==}
     dependencies:
-      '@types/react': 18.0.12
+      '@types/react': 18.0.13
     dev: false
 
   /@types/react-transition-group/4.4.4:
     resolution: {integrity: sha512-7gAPz7anVK5xzbeQW9wFBDg7G++aPLAFY0QaSMOou9rJZpbuI58WAuJrgu+qR92l61grlnCUe7AFX8KGahAgug==}
     dependencies:
-      '@types/react': 18.0.12
+      '@types/react': 18.0.13
     dev: false
 
-  /@types/react/18.0.12:
-    resolution: {integrity: sha512-duF1OTASSBQtcigUvhuiTB1Ya3OvSy+xORCiEf20H0P0lzx+/KeVsA99U5UjLXSbyo1DRJDlLKqTeM1ngosqtg==}
+  /@types/react/18.0.13:
+    resolution: {integrity: sha512-psqptIYQxGUFuGYwP3KCFVtPTkMpIcrqFmtKblWEUQhLuYLpHBwJkXhjp6eHfDM5IbyskY4x7qQpLedEsPkHlA==}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
@@ -8081,7 +8081,7 @@ packages:
       - webpack-plugin-serve
     dev: false
 
-  /react-select/5.3.2_zslnhrumrmjiaznigdttriuiiy:
+  /react-select/5.3.2_ocvlaah2275pzedeuxsmtxxp2y:
     resolution: {integrity: sha512-W6Irh7U6Ha7p5uQQ2ZnemoCQ8mcfgOtHfw3wuMzG6FAu0P+CYicgofSLOq97BhjMx8jS+h+wwWdCBeVVZ9VqlQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -8089,7 +8089,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.17.8
       '@emotion/cache': 11.7.1
-      '@emotion/react': 11.8.2_ihkhab3gpahsyb3ahx7z7w4mhq
+      '@emotion/react': 11.8.2_wlff343ihbuq5ksmlrv2tytkq4
       '@types/react-transition-group': 4.4.4
       memoize-one: 5.2.1
       prop-types: 15.8.1
